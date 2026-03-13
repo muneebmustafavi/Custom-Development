@@ -1,0 +1,6 @@
+[u693433390@sg-nme-web503 public_html]$ ls
+backup.zip  db.sql  default.php  main
+[u693433390@sg-nme-web503 public_html]$ mysql -u u693433390_hbic -p u693433390_hbic < db.sql
+mysql: Deprecated program name. It will be removed in a future release, use '/usr/bin/mariadb' instead
+Enter password:
+[u693433390@sg-nme-web503 public_html]$
