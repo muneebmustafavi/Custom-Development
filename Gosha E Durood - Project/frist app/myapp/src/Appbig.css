@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  h1, h2, p, button, input {
+    font-family: 'Quicksand', sans-serif;
+  }
+.app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../images/bg-image.png'); /* Add your image path */
+    background-size: cover;
+    background-position: center;
+  }

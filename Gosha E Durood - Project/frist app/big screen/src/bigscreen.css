@@ -1,0 +1,86 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling */
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1, h2, p, button, input {
+  font-family: 'Quicksand', sans-serif;
+  color:white;
+}
+
+.app_bigscreen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url('../images/bg-image-bs.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Rows */
+.app_bigscreen .row {
+  display: flex;
+  width: 100%;
+}
+
+.app_bigscreen .first-row {
+  height: 40%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10% !important;
+  display: block;
+  margin: auto;
+}
+.app_bigscreen .main-num {
+  font-size: 70px;
+  font-weight: 800;
+}
+.app_bigscreen .main-text {
+  font-size: 50px;
+  font-weight: 500;
+}
+.app_bigscreen .second-row {
+  height: 60%;
+  width: 88%;
+  display: flex;
+  margin: auto;
+  margin-top: 7%;
+}
+
+
+/* Columns */
+.app_bigscreen .column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app_bigscreen .first-column {
+  width: 33%;
+  flex-direction: column;
+}
+
+.app_bigscreen .second-column {
+  width: 33%;
+  flex-direction: column;
+}
+
+.app_bigscreen .third-column {
+  width: 33%;
+  flex-direction: column;
+}
+.app_bigscreen .second-main-num {
+  font-size: 70px;
+  font-weight: 800;
+}

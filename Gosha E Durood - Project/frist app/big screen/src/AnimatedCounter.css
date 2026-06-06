@@ -1,0 +1,31 @@
+.animated-counter {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 3rem; /* Adjust font size */
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .digit-container {
+    height: 1em; /* Match font size */
+    overflow: hidden;
+    position: relative;
+    width: 0.7em; /* Adjust width for digit spacing */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .digit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease-in-out; /* Smooth scrolling animation */
+  }
+  
+  .digit span {
+    display: block;
+    height: 1em; /* Match container height */
+    text-align: center;
+  }
+  

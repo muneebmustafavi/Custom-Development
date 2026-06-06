@@ -1,0 +1,128 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling */
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1, h2, p, button, input {
+  font-family: 'Quicksand', sans-serif;
+  color:white;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url('../images/bg-image.png'); /* Add your image path */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Rows */
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.first-row {
+  height: 40%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 9% !important;
+  display: block;
+  margin: auto;
+}
+.main-num {
+  font-size: 70px;
+  font-weight: 800;
+}
+.main-text {
+  font-size: 50px;
+  font-weight: 500;
+}
+.second-row {
+  height: 60%;
+  width: 80%;
+  display: flex;
+  margin: auto;
+  margin-top: 7%;
+}
+
+
+/* Columns */
+.column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-column {
+  width: 33%;
+  flex-direction: column;
+}
+
+.second-column {
+  width: 33%;
+  flex-direction: column;
+}
+
+.third-column {
+  width: 33%;
+  flex-direction: column;
+}
+.second-main-num {
+  font-size: 70px;
+  font-weight: 800;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.animated-counter {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 3rem; /* Adjust font size as needed */
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.digit-container {
+  height: 1em; /* Match the font size */
+  overflow: hidden;
+  position: relative;
+  width: 0.7em; /* Adjust width for spacing between digits */
+  display: flex;
+  justify-content: center;
+}
+
+.digit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.digit span {
+  display: block;
+  height: 1em; /* Match the container height */
+  text-align: center;
+}

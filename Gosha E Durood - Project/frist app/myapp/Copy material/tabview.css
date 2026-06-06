@@ -1,0 +1,461 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling */
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1, h2, p, button, input {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url('../images/bg-image-tab.png'); /* Add your image path */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Rows */
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.first-row {
+  height: 40%;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-row {
+  height: 60%;
+  display: flex;
+}
+
+/* Columns */
+.column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-column {
+  width: 45%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.second-column {
+  width: 55%;
+  flex-direction: column;
+}
+
+/* Keypad Styles */
+.keypad-container {
+  width: 60%;
+  text-align: center;
+  margin-left: 15%;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.keypad-input {
+  width: 66%;
+  padding: 3%;
+  font-size: 1.2rem;
+  border: 5px solid #1B7132;
+  border-radius: 2px;
+  background-color: #f8f8f8a6;
+}
+
+.keypad-input::placeholder {
+  color: #000000; 
+  opacity: 1; 
+}
+
+.submit-button {
+  width: 32%;
+  padding: 4%;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #1B7132;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px #2e7d32;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #388e3c;
+}
+
+.submit-button:active {
+  background-color: #1B7132;
+  box-shadow: none;
+  transform: translateY(2px);
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.keypad-button {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #1B7132;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px #2e7d32;
+  transition: background-color 0.3s ease;
+}
+
+.keypad-button:hover {
+  background-color: #388e3c;
+}
+
+.keypad-button:active {
+  background-color: #2e7d32;
+  box-shadow: none;
+  transform: translateY(2px);
+}
+
+.clear-button {
+  grid-column: span 2; /* Make the Clear button span full width */
+  background-color: #f44336;
+  box-shadow: 0 4px #c62828;
+}
+
+.clear-button:hover {
+  background-color: #d32f2f;
+}
+
+.clear-button:active {
+  background-color: #c62828;
+  transform: translateY(2px);
+}
+
+/* Quick Submit Styles */
+.quick-submit-container {
+  width: 60%;
+  text-align: center;
+  margin-right: 10%;
+}
+
+.quick-submit-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff;
+  background-color: #1B7132;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.quick-submit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 buttons per row */
+  gap: 10px;
+}
+
+.quick-submit-button {
+  padding: 13%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #1B7132;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px #2e7d32;
+  transition: background-color 0.3s ease;
+}
+
+.quick-submit-button:hover {
+  background-color: #388e3c;
+}
+
+.quick-submit-button:active {
+  background-color: #2e7d32;
+  box-shadow: none;
+  transform: translateY(2px);
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup (Shared) */
+.popup {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  animation: zoomOut 0.3s ease-out;
+}
+
+.popup h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.popup p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Confirmation Popup Buttons */
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.popup-button {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup-button.confirm {
+  background-color: #4caf50;
+  color: white;
+}
+
+.popup-button.confirm:hover {
+  background-color: #388e3c;
+}
+
+.popup-button.cancel {
+  background-color: #f44336;
+  color: white;
+}
+
+.popup-button.cancel:hover {
+  background-color: #d32f2f;
+}
+
+/* Submission Popup */
+.submission-popup {
+  background-color: #4caf50;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  animation: zoomOut 0.3s ease-out;
+}
+
+.submission-popup h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.submission-popup p {
+  font-size: 1.2rem;
+}
+
+/* Zoom-Out Animation */
+@keyframes zoomOut {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .keypad-container {
+    width: 60%;
+    text-align: center;
+    margin-left: 15%;
+  }
+  
+  .input-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .keypad-input {
+    width: 66%;
+    padding: 3%;
+    font-size: 12px;
+    border: 2px solid #1B7132;
+    border-radius: 2px;
+    background-color: #f8f8f8a6;
+  }
+  
+  .keypad-input::placeholder {
+    color: #000000; 
+    opacity: 1; 
+  }
+  
+  .submit-button {
+    width: 32%;
+    padding: 3%;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #1B7132;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px #2e7d32;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #388e3c;
+  }
+  
+  .submit-button:active {
+    background-color: #1B7132;
+    box-shadow: none;
+    transform: translateY(2px);
+  }
+  
+  .keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+  .keypad-button {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #1B7132;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px #2e7d32;
+    transition: background-color 0.3s ease;
+  }
+  .keypad-button:hover {
+    background-color: #388e3c;
+  }
+  
+  .keypad-button:active {
+    background-color: #2e7d32;
+    box-shadow: none;
+    transform: translateY(2px);
+  }
+  
+  .clear-button {
+    grid-column: span 2; /* Make the Clear button span full width */
+    background-color: #f44336;
+    box-shadow: 0 2px #c62828;
+  }
+  
+  .clear-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  .clear-button:active {
+    background-color: #c62828;
+    transform: translateY(2px);
+  }
+
+/* Quick Submit Styles */
+  .quick-submit-container {
+    width: 60%;
+    text-align: center;
+    margin-right: 10%;
+  }
+
+  .quick-submit-header {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+    background-color: #1B7132;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .quick-submit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 buttons per row */
+    gap: 5px;
+  }
+
+  .quick-submit-button {
+    padding: 10%;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #1B7132;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px #2e7d32;
+    transition: background-color 0.3s ease;
+  }
+
+  .quick-submit-button:hover {
+    background-color: #388e3c;
+  }
+
+  .quick-submit-button:active {
+    background-color: #2e7d32;
+    box-shadow: none;
+    transform: translateY(2px);
+  }
+
+}
